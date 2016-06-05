@@ -88,7 +88,7 @@ exports.login = utils.toPromise(function (username, password, opts, callback) {
     method : 'POST',
     url : utils.getSessionUrl(db),
     headers : {'Content-Type': 'application/json'},
-    body : 'name=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password)
+    body : {'name': username, 'password': password }
   }, opts.ajax || {});
   utils.ajax(ajaxOpts, wrapError(callback));
 });
