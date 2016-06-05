@@ -87,7 +87,7 @@ exports.login = utils.toPromise(function (username, password, opts, callback) {
   var ajaxOpts = utils.extend(true, {
     method : 'POST',
     url : utils.getSessionUrl(db),
-    headers : {'Content-Type': 'application/x-www-form-urlencoded'},
+    headers : {'Content-Type': 'application/json'},
     body : 'name=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password)
   }, opts.ajax || {});
   utils.ajax(ajaxOpts, wrapError(callback));
@@ -370,8 +370,8 @@ exports.clone = function (obj) {
 exports.uuid = require('./uuid');
 exports.Promise = Promise;
 
-}).call(this,require("/Users/nolan/workspace/pouchdb-authentication/node_modules/process/browser.js"))
-},{"./uuid":3,"/Users/nolan/workspace/pouchdb-authentication/node_modules/process/browser.js":13,"inherits":5,"pouchdb-extend":8,"pouchdb/extras/ajax":9,"pouchdb/extras/promise":10,"url-join":14}],3:[function(require,module,exports){
+}).call(this,require("/Users/brettm/Projects/Docker/zink/pouchdb-authentication/node_modules/process/browser.js"))
+},{"./uuid":3,"/Users/brettm/Projects/Docker/zink/pouchdb-authentication/node_modules/process/browser.js":13,"inherits":5,"pouchdb-extend":8,"pouchdb/extras/ajax":9,"pouchdb/extras/promise":10,"url-join":14}],3:[function(require,module,exports){
 "use strict";
 
 // BEGIN Math.uuid.js
